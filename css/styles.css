@@ -627,6 +627,8 @@ hero
 }
 .button {
   background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   color: #ffffff;
   font-weight: 500;
   font-size: 16px;
@@ -639,6 +641,7 @@ hero
   margin-right: auto;
   margin-left: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
 }
 .button:active,
 .button:focus,
@@ -707,7 +710,6 @@ section-two
 }
 .section-two {
   min-width: 288px;
-  min-height: 696px;
   text-align: start;
   padding-top: 96px;
   padding-bottom: 96px;
@@ -738,16 +740,6 @@ section-two
   height: 72px;
 }
 @media screen and (min-width: 768px) {
-  .section-two {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: start;
-    padding-top: 96px;
-    padding-bottom: 96px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .strategy {
     text-align: start;
   }
@@ -820,21 +812,28 @@ our-team
   align-items: center;
   padding-top: 96px;
   padding-bottom: 96px;
-  padding-left: auto;
-  padding-right: auto;
 }
 .our-team {
   text-transform: capitalize;
   margin-bottom: 72px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
 }
 .list-team {
   display: flex;
   flex-direction: column;
   gap: 72px;
-  width: 264px;
+  justify-content: center;
+  align-items: center;
 }
 .team-item {
   background-color: #ffffff;
+  width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -904,14 +903,12 @@ our-team
     align-items: center;
     gap: 64px;
     column-gap: 24px;
-    min-width: 768px;
   }
   .team-item {
-    flex-basis: calc((100% - 128) / 2);
-  }
-  .team-item {
+    width: calc((100% - 72px) / 4);
     width: 264px;
   }
+
   .team-img {
     display: block;
     max-width: 100%;
@@ -929,11 +926,9 @@ our-team
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 24px;
-    width: 1158px;
   }
   .team-item {
     width: calc((100% - 72px) / 4);
-    width: 264px;
   }
   .our-team-list {
     display: flex;
@@ -956,6 +951,13 @@ our-product
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
 }
 .our-products-list {
   display: flex;
@@ -1053,21 +1055,23 @@ footer
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  padding: 0;
 }
 .studio {
   color: #f4f4fd;
 }
 .end {
+  font-family: "Roboto", sans-serif;
   color: #f4f4fd;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  margin-bottom: 72px;
   width: 270px;
 }
 .footer-media {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -1080,7 +1084,6 @@ footer
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 72px;
 }
 .list-footer {
   width: 40px;
@@ -1116,6 +1119,7 @@ footer
 }
 
 .footer-form-text {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -1132,6 +1136,7 @@ footer
   align-items: center;
 }
 .footer-form-input {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   width: 264px;
   font-size: 12px;
@@ -1170,6 +1175,13 @@ footer
 .footer-button-icon {
   margin-left: 16px;
 }
+.first-footer-conteiner {
+  margin-bottom: 72px;
+}
+.footer-social {
+  margin-bottom: 72px;
+}
+
 @media screen and (min-width: 768px) {
   .logo-footer {
     text-align: start;
@@ -1184,9 +1196,7 @@ footer
     justify-content: start;
     padding-left: 108px;
   }
-  .logo-footer {
-    margin-bottom: 0;
-  }
+
   .form-for-label {
     display: flex;
     gap: 24px;
@@ -1203,9 +1213,11 @@ footer
 @media screen and (min-width: 1158px) {
   .first-footer-conteiner {
     margin-right: 120px;
+    margin-bottom: 0;
   }
   .footer-social {
-    margin-right: 74px;
+    margin-right: 80px;
+    margin-bottom: 0;
   }
   .footer-all {
     padding-left: 0;
